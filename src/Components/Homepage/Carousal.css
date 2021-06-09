@@ -1,0 +1,58 @@
+.App_Main_Section {
+    background-color: #ffc017;
+    border-bottom: 1.5px solid black;
+    display: flex;
+}
+.App_Main_Section .Heading__section {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.App_Main_Section .Heading__section h1 {
+    width: 80%;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Noto Serif JP', serif;
+    color: #080808;
+}
+@media (max-width: 425px) {
+    .App_Main_Section .Heading__section h1 {
+        font-size: 50px;
+        width: 100%;
+   }
+    .App_Main_Section .Heading__section p {
+        font-size: 15px;
+   }
+}
+.App_Main_Section .Heading__section p {
+    width: 90%;
+    font-size: 18px;
+    color: #2a2a2a;
+    margin-top: 45px;
+}
+.App_Main_Section .Heading__section a {
+    color: #2a2a2a;
+}
+.App_Main_Section .Heading__section button {
+    background-color: #ffc017;
+    width: 130px;
+    padding: 11px;
+    border-radius: 50px;
+    border: 1.8px solid black;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+.App_Main_Section .image__section img {
+    display: inline;
+    width: 400px;
+    resize: contain;
+    max-width: 500px;
+    margin-right: 60px;
+}
+@media (max-width: 800px) {
+    .App_Main_Section .image__section img {
+        display: none;
+   }
+}

@@ -1,0 +1,20 @@
+.footer-wrapper{
+    display: flexbox;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    margin-bottom: 120px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.footer-first{
+    display: flex;
+    flex-direction: row;
+    color:rgba(255, 255, 255, 0.7);
+}
+.footer-children h3{
+    color: white;
+}
+.footer-children p{
+    font-size: 1.25rem;;
+}

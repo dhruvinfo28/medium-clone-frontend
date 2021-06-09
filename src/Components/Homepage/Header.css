@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap");
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 font-family: 'Open Sans', sans-serif;
+}
+ .Navbar__section {
+	 background-color: #ffc017;
+	 border-bottom: 1.8px solid #080808;
+	 padding: 0 40px 0 35px;
+	 position: sticky;
+	 top: 0;
+}
+ .Navbar__section img {
+	 display: inline;
+	 width: 170px;
+}
+ .Navbar__section .Navbar__right {
+	 font-size: 13px;
+	 font-weight: 600;
+}
+ .Navbar__section .Navbar__right button {
+	 background-color: #080808;
+	 color: #fff;
+	 border: none;
+	 border-radius: 50px;
+	 width: 100px;
+}
