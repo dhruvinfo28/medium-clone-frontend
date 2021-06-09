@@ -37,7 +37,7 @@ const SemiBlog = ({renderBlog})=>{
                         <h1 className="">{obj.heading}</h1>
                         <h3 className="">{obj.sub_heading}</h3>
                         <div className="semi-blog-sub-wrapper">
-                            <h5 className="third-level">{obj.date}</h5>
+                            <h5 className="third-level">{obj.date.substr(0,10)}</h5>
                             <img src={obj.image} alt="" />
                         </div>
                     </div>

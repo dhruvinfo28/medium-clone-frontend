@@ -59,7 +59,7 @@ function App() {
     <Router>
     <Route exact path='/'>
       <div className="App">
-        <Header sideMenu={['Our Story','MemberShip','Write','SignIn']}/>
+        <Header sideMenu={['Our Story','MemberShip','Write','SignIn']} btn={true}/>
         {renderB && <BlogPage value={currBlog} back={back}/>}
         {!renderB && <Carousal />}
         {!renderB && <SemiBlog renderBlog={renderBlog}/>}

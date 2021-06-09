@@ -10,7 +10,7 @@ const Carousal = () => {
                 <p>
                     Read and share new perspectives on just about any topic. Everyone's welcome <a href="#">Learn more</a>
                 </p>
-                <button>Get Started</button>
+                <button onClick={()=>window.location.href='/signup'}>Get Started</button>
             </div>
             <div className="image__section">
                 <img

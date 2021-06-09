@@ -3,7 +3,7 @@ import React from 'react'
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap'
 import './Header.css'
 
-const Header = ({sideMenu}) => {
+const Header = ({sideMenu,btn}) => {
 
     return (
     <div className="Navbar__section">
@@ -25,7 +25,7 @@ const Header = ({sideMenu}) => {
                    return <Nav.Link href="#">{option}</Nav.Link>
                })
            }
-        <button>Get Started</button>
+           {btn && <button onClick={()=>window.location.href='/signup'}>Get Started</button>}
         </Nav>
         </Navbar.Collapse>
         </Navbar>
