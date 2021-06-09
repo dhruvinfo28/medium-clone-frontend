@@ -7,9 +7,14 @@
 .main-blog-container .children{
     margin:2rem;
 }
-.main-blog-container child2{
+.main-blog-container .child2{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: left; */
+    /* align-items: center; */
+    width:600px;
+}
+.main-blog-container .child2 img{
+    width:250px;
+    height: 250px;;
 }

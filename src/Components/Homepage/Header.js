@@ -8,7 +8,7 @@ const Header = ({sideMenu}) => {
     return (
     <div className="Navbar__section">
         <Navbar collapseOnSelect expand="lg" bg="#FFC017">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
             <img 
             src="https://miro.medium.com/max/8978/1*s986xIGqhfsN8U--09_AdA.png"
             alt=""
@@ -21,6 +21,7 @@ const Header = ({sideMenu}) => {
        <Nav className="Navbar__right">
            {
                sideMenu.map(option=>{
+                   if(option==='SignIn') return <Nav.Link href="/login">{option}</Nav.Link>
                    return <Nav.Link href="#">{option}</Nav.Link>
                })
            }

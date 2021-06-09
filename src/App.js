@@ -5,10 +5,13 @@ import Carousal from './Components/Homepage/Carousal';
 import SemiBlog from './Components/Homepage/semiBlog'
 import Footer from './Components/Homepage/footer';
 import BlogPage from './Components/BlogPage/blogPage'
-import { render } from 'react-dom';
+import Login from './Components/Auth/Login'
+import Registration from './Components/Auth/Registration'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 
 // {heading,sub_heading,author,claps,dislikes,comment,content,date}
+
 
 function App() {
   const [renderB, setRenderB] = useState(false);
@@ -53,13 +56,23 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header sideMenu={['Our Story','MemberShip','Write','SignIn']}/>
-      {renderB && <BlogPage value={currBlog} back={back}/>}
-      {!renderB && <Carousal />}
-      {!renderB && <SemiBlog renderBlog={renderBlog}/>}
-      <Footer/>
-    </div>
+    <Router>
+    <Route exact path='/'>
+      <div className="App">
+        <Header sideMenu={['Our Story','MemberShip','Write','SignIn']}/>
+        {renderB && <BlogPage value={currBlog} back={back}/>}
+        {!renderB && <Carousal />}
+        {!renderB && <SemiBlog renderBlog={renderBlog}/>}
+        <Footer/>
+      </div>
+    </Route>
+    <Route exact path= "/signup">
+        <Registration/>
+    </Route>
+    <Route exact path= "/login">
+      <Login/>
+    </Route>
+    </Router>
   );
 }
 

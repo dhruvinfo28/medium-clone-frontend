@@ -5,6 +5,7 @@ const BlogPage = ({ value, back }) => {
     console.log(value)
         return (<article className='main-blog-container'>
             <div className="children child1">
+                <button onClick={back}  style={{margin:'10px'}}>Back</button>
                 <p>
                 Claps: {value.claps.liked_by.length}
                 </p>
@@ -17,7 +18,6 @@ const BlogPage = ({ value, back }) => {
                 <p>
                   Dislikes:  {value.dislikes.liked_by.length}
                 </p>
-                <button onClick={back}>Back</button>
                 </div>
             <div className="children child2">
                 <h1>
@@ -30,7 +30,7 @@ const BlogPage = ({ value, back }) => {
                     Author: {value.author}
                 </h6>
                 <img src={value.image} alt="" />
-                <p>
+                <p style={{marginTop:'25px'}}>
                     {value.content}
                 </p>
             </div>
