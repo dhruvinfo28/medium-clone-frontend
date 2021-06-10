@@ -25,8 +25,9 @@ const Header = ({sideMenu,btn}) => {
                    if(option==='Create Blog') return  <Nav.Link href="/createBlog">{option}</Nav.Link>
                    if(option === 'Log out') return <Nav.Link onClick={()=>{
                        localStorage.clear()
-                       window.location.reload()
+                       window.location.href = '/'
                     }}>{option}</Nav.Link>
+                    if(option==='My Blogs') return <Nav.Link href="/myBlogs">{option}</Nav.Link>
                    return <Nav.Link href="#">{option}</Nav.Link>
                })
            }

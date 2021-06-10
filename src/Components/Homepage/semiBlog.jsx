@@ -12,8 +12,6 @@ const SemiBlog = ({renderBlog})=>{
     useEffect(()=>{
         axios.get(url+'/blogs')
         .then(response=>{
-            console.log(response.data);
-            console.log('Here')
             setData(response.data)
             setIsLoading(false);
         })

@@ -7,7 +7,9 @@ import Footer from './Components/Homepage/footer';
 import BlogPage from './Components/BlogPage/blogPage'
 import Login from './Components/Auth/Login'
 import Registration from './Components/Auth/Registration'
-import Dropdown from './Components/dropdown/dropdown'
+import MyBlogs from './Components/myBlogs/myBlogs'
+import BlogCard from './Components/myBlogs/blogCard'
+
 import CreateBlog from './Components/createBlog/createBlog'
 
 import {BrowserRouter as Router, Route} from 'react-router-dom'
@@ -45,7 +47,6 @@ function App() {
   },[currBlog])
 
   const renderBlog = ({heading,sub_heading,author,claps,dislikes,comment,content,date,image,_id})=>{
-    console.log('In Appjs')
     // console.log(heading)
       setCurrBlog({
         _id,
@@ -106,8 +107,13 @@ function App() {
     </Route>
     <Route exact path='/createBlog'>
       {localStorage.getItem('loggedIn')==='true'? <><Header sideMenu={headerInfo} btn={getStarted}/>
-        <CreateBlog /></>: <div>Please Login</div>}
-      
+        <CreateBlog /></>: <div>Please Login</div>}   
+    </Route>
+    <Route exact path = '/myBlogs'>
+      {localStorage.getItem('loggedIn')==='true'? <MyBlogs/>: <div>Please Login</div>}
+    </Route>
+    <Route exact path = '/test'>
+        <BlogCard/>
     </Route>
     </Router>
   );

@@ -55,7 +55,7 @@ const BlogPage = ({ value, back }) => {
     }
     return (<article className='main-blog-container'>
         <div className="children child1">
-            <button onClick={back} style={{ margin: '10px' }}>Back</button>
+            <button onClick={back} style={{ marginBottom: '10px' }} className="btn btn-warning">Back</button>
             <p onClick={likeBlog} className='interact'>
                 Claps: {likes}
             </p>
