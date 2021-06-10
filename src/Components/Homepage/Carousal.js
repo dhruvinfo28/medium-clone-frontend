@@ -2,7 +2,7 @@ import React from 'react'
 import image from './1.png';
 import './Carousal.css'
 
-const Carousal = () => {
+const Carousal = ({btn}) => {
     return (
         <div className="App_Main_Section">
             <div className="Heading__section">
@@ -10,7 +10,7 @@ const Carousal = () => {
                 <p>
                     Read and share new perspectives on just about any topic. Everyone's welcome <a href="#">Learn more</a>
                 </p>
-                <button onClick={()=>window.location.href='/signup'}>Get Started</button>
+                {btn && <button onClick={()=>window.location.href='/signup'}>Get Started</button>}
             </div>
             <div className="image__section">
                 <img

@@ -22,6 +22,11 @@ const Header = ({sideMenu,btn}) => {
            {
                sideMenu.map(option=>{
                    if(option==='SignIn') return <Nav.Link href="/login">{option}</Nav.Link>
+                   if(option==='Create Blog') return  <Nav.Link href="/createBlog">{option}</Nav.Link>
+                   if(option === 'Log out') return <Nav.Link onClick={()=>{
+                       localStorage.clear()
+                       window.location.reload()
+                    }}>{option}</Nav.Link>
                    return <Nav.Link href="#">{option}</Nav.Link>
                })
            }
